@@ -1,1 +1,7 @@
 LICENSES/CC-BY-SA-4.0.html whitespace=-blank-at-eol
+
+# Preserve checksum-pinned upstream notices and patches verbatim.
+aports/alpine-spin-themes/COPYING* whitespace=-blank-at-eol,-blank-at-eof
+aports/alpine-spin-themes/README.icons whitespace=-blank-at-eof conflict-marker-size=32
+aports/terminology/*.patch whitespace=-blank-at-eol,-blank-at-eof
+aports/efl/APKBUILD whitespace=-blank-at-eof
