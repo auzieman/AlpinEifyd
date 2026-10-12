@@ -90,3 +90,13 @@ query was corrected in installer r6; a disposable installation and its boot to
 the installed login greeter passed. Preserved-home reinstall, authenticated
 installed-desktop login and physical hardware remain separate acceptance work.
 Media availability is shown on the public page only after publication succeeds.
+
+## Native companion application packages
+
+E-Jamz and the original BlackKnight Storm/Still wallpapers have separate native
+APK recipes in aports/ejamz and aports/blackknight-wallpapers. Their sources are
+pinned to the accepted v0.1.0 commits with SHA512 archive checksums.
+Use BUILD_ORDER=e-apps-order with the Compose builder to select only these
+recipes; dependencies remain native APK packages. Full donor-derived desktop
+theme binaries are excluded. Signed-feed installation and proof are recorded
+in companion-apks.md after publication.

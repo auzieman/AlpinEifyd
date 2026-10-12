@@ -1,0 +1,28 @@
+# Maintainer: Auzieman <builds@auzietek.com>
+pkgname=blackknight-wallpapers
+pkgver=0.1.0
+pkgrel=0
+pkgdesc="Original BlackKnight Storm and Still Enlightenment wallpapers"
+url="https://github.com/auzieman/BlackKnight-E-Theme"
+arch="noarch"
+license="GPL-3.0-only AND CC-BY-SA-4.0"
+makedepends="efl"
+source="blackknight-wallpapers-$pkgver.tar.gz::https://codeload.github.com/auzieman/BlackKnight-E-Theme/tar.gz/d6f035908ff0719e4fcd8e644001aca7e9424b32"
+builddir="$srcdir/BlackKnight-E-Theme-d6f035908ff0719e4fcd8e644001aca7e9424b32"
+build() {
+ BK_OUTPUT_DIR="$builddir/output" sh themes/blackknight/build.sh
+}
+check() {
+ test -s output/blackknight-still.edj
+ test -s output/blackknight-animated.edj
+}
+package() {
+ install -Dm644 output/blackknight-still.edj "$pkgdir/usr/share/enlightenment/data/backgrounds/BlackKnight-Still.edj"
+ install -Dm644 output/blackknight-animated.edj "$pkgdir/usr/share/enlightenment/data/backgrounds/BlackKnight-Storm.edj"
+ mkdir -p "$pkgdir/usr/share/doc/$pkgname"
+ cp -R LICENSE LICENSES LICENSING.md NOTICE.md "$pkgdir/usr/share/doc/$pkgname/"
+ install -Dm644 themes/blackknight/assets/provenance.json "$pkgdir/usr/share/doc/$pkgname/wallpaper-provenance.json"
+}
+sha512sums="
+31edcd020f17bb703eb4c271365633dc7217bd03d4ae183c454c81301a04d41a0106fa2d302ec2ce1a62be03793aa89c121b062a165b05522d0fb94a25956381  blackknight-wallpapers-$pkgver.tar.gz
+"

@@ -1,0 +1,39 @@
+# Maintainer: Auzieman <builds@auzietek.com>
+pkgname=ejamz
+pkgver=0.1.0
+pkgrel=0
+pkgdesc="Compact native EFL music player, playlists and ten-band equalizer"
+url="https://github.com/auzieman/E-Jamz"
+arch="x86_64"
+license="GPL-3.0-only AND CC-BY-SA-4.0 AND OFL-1.1"
+depends="gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav ffmpeg"
+makedepends="build-base pkgconf efl-dev gstreamer-dev python3 py3-fonttools"
+source="ejamz-$pkgver.tar.gz::https://codeload.github.com/auzieman/E-Jamz/tar.gz/7171240207e3a39de2afa1329ec9f7579c52cf78 ejamz ejamz.desktop"
+builddir="$srcdir/E-Jamz-7171240207e3a39de2afa1329ec9f7579c52cf78"
+
+build() {
+ mkdir -p output
+ cc -std=gnu11 -Wall -Wextra -O2 $CFLAGS src/ui/prototype.c -o output/ejamz $LDFLAGS $(pkg-config --cflags --libs elementary gstreamer-1.0 ecore-x)
+ python3 -m fontTools.varLib.instancer assets/fonts/Doto-variable.ttf wght=800 ROND=0 -o output/EJamzLCD.ttf
+ edje_cc -fd output -id assets/skins/blue-steel/assets src/ui/player.edc output/player.edj
+}
+check() {
+ test -s output/ejamz
+ test -s output/player.edj
+ test -s output/EJamzLCD.ttf
+}
+package() {
+ install -Dm755 output/ejamz "$pkgdir/usr/libexec/ejamz"
+ install -Dm755 "$srcdir/ejamz" "$pkgdir/usr/bin/ejamz"
+ install -Dm644 "$srcdir/ejamz.desktop" "$pkgdir/usr/share/applications/ejamz.desktop"
+ install -Dm644 output/player.edj "$pkgdir/usr/share/ejamz/player.edj"
+ install -Dm644 output/EJamzLCD.ttf "$pkgdir/usr/share/ejamz/EJamzLCD.ttf"
+ mkdir -p "$pkgdir/usr/share/doc/$pkgname"
+ cp -R LICENSE LICENSES LICENSING.md NOTICE.md "$pkgdir/usr/share/doc/$pkgname/"
+ install -Dm644 assets/fonts/OFL.txt "$pkgdir/usr/share/doc/$pkgname/Doto-OFL.txt"
+}
+sha512sums="
+ff6448cf9047ff4eb1a6f1ec3aed6e03b075caf03c7ab8de174c3d7324c6a368ebd2cf4649355e40741a886cd35d25fa99edab8fe5f2dceff4f52ac5f86998d2  ejamz-$pkgver.tar.gz
+200771de0b4c29e93428c31d2d5a0d8f604b6ec8dd0713cdbf00a32bb1dedba4cb22960b69ca65c565658a52faba9eb42dcf0e195935e963cceba3d9623e8595  ejamz
+8959985f58ee26882c0a06467d092df31d2a17cbf7b6eb5c5715a8e7222d13f3cbd0bc980bf0edaf693db28aee2e73ef5e62cb8a4b2cbeb97c91e6267e624c58  ejamz.desktop
+"

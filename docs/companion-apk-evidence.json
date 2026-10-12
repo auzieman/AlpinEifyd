@@ -1,0 +1,30 @@
+{
+  "build_run": "490909fd-80e2-4c31-aa0a-c38dfbdac8b8",
+  "version": "0.1.0-r0",
+  "compiler_image": "sha256:95b932cbd2899218225a6783074acfba1cd26abae142f1ec26ba8f13c3c83f8f",
+  "signing_key": "builder-6acd560b.rsa.pub",
+  "files": {
+    "builder-6acd560b.rsa.pub": "f308145bc1a64270e85f58d8af810015a5e2605a5bba1ddbeb2f86da65a42bd4",
+    "x86_64/ejamz-0.1.0-r0.apk": "215e3696469fc7d9cd10f0f1229ac943ed1d1c7456b08999e93eebf9fcb63608",
+    "x86_64/blackknight-wallpapers-0.1.0-r0.apk": "7df460ca523ed98f291ccf5fab96be956e70e5cf063e4dd35ebba5a90b112738",
+    "x86_64/APKINDEX.tar.gz": "50e1e967985985e1c257be328a5182e2f05d34fceaa203a0734ac702de2bfba4"
+  },
+  "sources": {
+    "E-Jamz": {
+      "commit": "7171240207e3a39de2afa1329ec9f7579c52cf78",
+      "url": "https://codeload.github.com/auzieman/E-Jamz/tar.gz/7171240207e3a39de2afa1329ec9f7579c52cf78",
+      "file": "E-Jamz-7171240207e3a39de2afa1329ec9f7579c52cf78.tar.gz",
+      "sha512": "ff6448cf9047ff4eb1a6f1ec3aed6e03b075caf03c7ab8de174c3d7324c6a368ebd2cf4649355e40741a886cd35d25fa99edab8fe5f2dceff4f52ac5f86998d2",
+      "sha256": "c5f5aa3c1e2274215bafbd75b5fcccb5da66b4af04e6c95d5bd60bcbdd14fa8e",
+      "size": 41776145
+    },
+    "BlackKnight-E-Theme": {
+      "commit": "d6f035908ff0719e4fcd8e644001aca7e9424b32",
+      "url": "https://codeload.github.com/auzieman/BlackKnight-E-Theme/tar.gz/d6f035908ff0719e4fcd8e644001aca7e9424b32",
+      "file": "BlackKnight-E-Theme-d6f035908ff0719e4fcd8e644001aca7e9424b32.tar.gz",
+      "sha512": "31edcd020f17bb703eb4c271365633dc7217bd03d4ae183c454c81301a04d41a0106fa2d302ec2ce1a62be03793aa89c121b062a165b05522d0fb94a25956381",
+      "sha256": "de716e63e484d25f90c498fe3168a089c602175979f7f74133464f9c0dcaa3d3",
+      "size": 19015974
+    }
+  }
+}

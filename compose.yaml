@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: build/Dockerfile
       args:
-        BUILD_ORDER: public-order
+        BUILD_ORDER: ${BUILD_ORDER:-public-order}
     ulimits:
       nofile: 1048576
     volumes:

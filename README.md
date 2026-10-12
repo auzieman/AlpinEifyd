@@ -82,3 +82,11 @@ the full `build/public-order` requires those verified assets before it can build
 The core `build/order` does not require the theme collection.
 Local laptop plans and lab receipts are not portable installer inputs.
 See [public release notes](docs/public-release.md) for validation limits.
+
+## Native companion APKs
+
+[E-Jamz and original BlackKnight wallpapers](docs/companion-apks.md) use native
+APK recipes, with a separately signed companion feed for AlpinE 3.24 x86_64.
+See the linked instructions for the additional public key, installation, source
+checksums and acceptance limits. Package installation preserves user settings
+and desktop selections.

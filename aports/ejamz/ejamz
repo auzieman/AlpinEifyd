@@ -1,0 +1,5 @@
+#!/bin/sh
+export EJAMZ_THEME="${EJAMZ_THEME:-/usr/share/ejamz/player.edj}"
+export ELM_ENGINE="${ELM_ENGINE:-software_x11}"
+export ELM_ACCEL="${ELM_ACCEL:-none}"
+exec /usr/libexec/ejamz "$@"
