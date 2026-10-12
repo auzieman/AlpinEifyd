@@ -58,3 +58,5 @@ blackknight-wallpapers`; this does not remove user music or settings. Removing
 the companion repository line is a separate configuration change.
 
 Package acceptance: BKC run `490909fd-80e2-4c31-aa0a-c38dfbdac8b8` completed. Signed APK verification, clean-root installation (including GStreamer/FFmpeg dependencies), installed launcher/skin/wallpaper presence and musl ELF linkage passed. Compiler image: `sha256:95b932cbd2899218225a6783074acfba1cd26abae142f1ec26ba8f13c3c83f8f`. [Published byte manifest](https://auzix.auzietek.com/alpine/repo/apps/v3.24/manifest.json) records APK/index/key hashes. The packages were built in run 0fec78a6-2f99-41cf-9fcc-394e3c769883; the final validation run reused those signed packages after exact recipe-hash comparison.
+
+Publication run `cc54ba45-4cdb-4c97-9c05-4400a4e34984` completed. HTTPS byte checks and a fresh Alpine client’s signature/key checks and package resolution passed. [Release article](https://beta.auzietek.com/post/alpine-native-companion-apps-e-jamz-blackknight?lane=auzietek).

@@ -22,3 +22,7 @@ first. Internal efl-dev comes from the freshly built local repository.
 Persistent distfiles and APK outputs remain outside Git. Work directories are
 keyed by the Docker compiler image ID; only that identical input image may reuse
 the completion markers. No AUZiX path rewrite or alternate loader is applied.
+
+## Native companion APKs — 2026-10-12
+
+E-Jamz and BlackKnight wallpaper recipes pin the original v0.1.0 commits and codeload SHA512 checksums. BKC run `490909fd-80e2-4c31-aa0a-c38dfbdac8b8` validates the signed packages built in 0fec78a6-2f99-41cf-9fcc-394e3c769883 after exact recipe-hash comparison. Compiler image `sha256:95b932cbd2899218225a6783074acfba1cd26abae142f1ec26ba8f13c3c83f8f` derives from the pinned Alpine 3.24.2 base with matching signed AlpinE EFL dependencies. Installed GStreamer/FFmpeg dependencies and musl linkage were verified in a clean root. Wallpaper EDJs match the accepted release bytes; interactive acceptance remains separately retained. Source recipe and public byte hashes are in docs/companion-apk-evidence.json.
