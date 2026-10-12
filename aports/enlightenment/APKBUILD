@@ -1,0 +1,25 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=enlightenment
+pkgver=0.27.1
+pkgrel=0
+pkgdesc="Enlightenment X11 desktop for AlpinE"
+url="https://www.enlightenment.org"
+arch="all"
+license="BSD-2-Clause"
+depends="dbus"
+makedepends="efl-dev meson ninja linux-pam-dev libexif-dev xcb-util-keysyms-dev libxkbcommon-dev gettext-dev xkeyboard-config"
+options="!check suid" # Upstream's system/password helpers intentionally use setuid.
+source="https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-$pkgver.tar.xz"
+
+build() {
+    abuild-meson -Dwl=false -Dxwayland=false -Dsystemd=false -Dnls=false . build
+    meson compile -C build -j 5
+}
+
+package() {
+    DESTDIR="$pkgdir" meson install --no-rebuild -C build
+}
+
+sha512sums="
+fadec65398c566cba37e1998373db1afb5476589916283b5a7d564bbfa4570ee11bb986546a813d9036e968e581f06bc25e5afc96b19d82b5dc42ccfdfefaf43  enlightenment-0.27.1.tar.xz
+"

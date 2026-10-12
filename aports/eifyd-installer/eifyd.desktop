@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Get E'ifyd — Install AlpinE
+Comment=Review and install this AlpinE workstation with native Alpine tools
+Exec=eifyd-installer
+Icon=/usr/share/eifyd/mark-shield-swords.png
+Categories=System;
+Terminal=false

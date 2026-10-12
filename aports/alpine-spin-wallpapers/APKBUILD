@@ -1,0 +1,23 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=alpine-spin-wallpapers
+pkgver=20260919
+pkgrel=0
+pkgdesc="AlpinE mountain wallpapers"
+url="https://github.com/simotek/Enlightenment-Themes"
+arch="noarch"
+license="CC0-1.0"
+options="!check"
+source="LICENSE alpine-midnight.svg alpine-violet.svg"
+builddir="$srcdir"
+
+package() {
+    install -d "$pkgdir/usr/share/backgrounds/alpine" "$pkgdir/usr/share/licenses/$pkgname"
+    install -m644 *.svg "$pkgdir/usr/share/backgrounds/alpine/"
+    install -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/"
+}
+
+sha512sums="
+3abad4befec401c8f88ac976777d68ebd614507b46bf1306d2169f1435e0c4c92d1f880b1d57bd522a65d64f883e6541c98759719addf36199cffea91b0483f5  LICENSE
+c39eed8483dddeb4a9579f94fc562d5c6ac5cc238b790e2a62905625029a794418baa4395f3ee548e689d74dd8ad8e61c6d5a6ceced4db083f2062f8437fc2c7  alpine-midnight.svg
+02e1f72235354b513fed58e673090cb60bb51bf4d4cf52cacefba298ac2a9cf23714e45a873a534436433a5dd4455934791dbce9172563e84517b00c582d90f7  alpine-violet.svg
+"

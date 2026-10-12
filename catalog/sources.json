@@ -1,0 +1,96 @@
+{
+  "format": "alpine-gitea-sources-v1",
+  "mirror_owner": "upstream-e",
+  "development_owner": "auzietek",
+  "mirror_interval": "8h",
+  "development_branch": "alpine-dev",
+  "sources": [
+    {
+      "name": "efl",
+      "upstream": "https://git.enlightenment.org/enlightenment/efl.git",
+      "upstream_branch": "master",
+      "verified_head": "cee1666531e729b84cdd4198abe89d7e1e73c948"
+    },
+    {
+      "name": "enlightenment",
+      "upstream": "https://git.enlightenment.org/enlightenment/enlightenment.git",
+      "upstream_branch": "master",
+      "verified_head": "c54cc550b42d9b60c942f2acc289e25140f3284c"
+    },
+    {
+      "name": "terminology",
+      "upstream": "https://git.enlightenment.org/enlightenment/terminology.git",
+      "upstream_branch": "master",
+      "verified_head": "e45403a6a594c91a183234a4df10395ccefab007"
+    },
+    {
+      "name": "rage",
+      "upstream": "https://git.enlightenment.org/enlightenment/rage.git",
+      "upstream_branch": "master",
+      "verified_head": "56635265784063f29c92f7ab400ec4b40a12e868"
+    },
+    {
+      "name": "ephoto",
+      "upstream": "https://git.enlightenment.org/enlightenment/ephoto.git",
+      "upstream_branch": "master",
+      "verified_head": "67d7cdbc75781bdf9c7f978c2ef335f1db66848d"
+    },
+    {
+      "name": "ecrire",
+      "upstream": "https://git.enlightenment.org/enlightenment/ecrire.git",
+      "upstream_branch": "master",
+      "verified_head": "de60d7997a7230b63f70783a226433c835d5a71f"
+    },
+    {
+      "name": "evisum",
+      "upstream": "https://git.enlightenment.org/enlightenment/evisum.git",
+      "upstream_branch": "master",
+      "verified_head": "f149da64c0caedd2bbd4d411cb97894a8be6d47d"
+    },
+    {
+      "name": "econnman",
+      "upstream": "https://git.enlightenment.org/enlightenment/econnman.git",
+      "upstream_branch": "master",
+      "verified_head": "463913ae261abc8c2320392b54cbf21d645b6ee4"
+    },
+    {
+      "name": "python-efl",
+      "upstream": "https://git.enlightenment.org/enlightenment/python-efl.git",
+      "upstream_branch": "master",
+      "verified_head": "8d23f65ea72ad22461abbc5ba0a5d90e61b14fc7"
+    },
+    {
+      "name": "enventor",
+      "upstream": "https://git.enlightenment.org/enlightenment/enventor.git",
+      "upstream_branch": "master",
+      "verified_head": "17b8d7026140ad0c220aadb2a7aadb74a42f9072"
+    },
+    {
+      "name": "edi",
+      "upstream": "https://git.enlightenment.org/enlightenment/edi.git",
+      "upstream_branch": "master",
+      "verified_head": "a6563f7c2ffa554935236844272dd635ccb4f904"
+    },
+    {
+      "name": "enlightenment-themes",
+      "upstream": "https://github.com/simotek/Enlightenment-Themes.git",
+      "upstream_branch": "master",
+      "verified_head": "48b5a9b5957357acedba17c8f48d3b83a46d61fd",
+      "role": "themes"
+    },
+    {
+      "name": "chrisripp-themes",
+      "upstream": "https://github.com/chrisripp/Themes.git",
+      "upstream_branch": "master",
+      "verified_head": "e3e26daaf59ae645a46229e49c2777a22bbc893c",
+      "role": "theme-candidates"
+    },
+    {
+      "name": "eslide",
+      "upstream": "https://github.com/1wErt3r/eslide.git",
+      "upstream_branch": "main",
+      "verified_head": "c5207ca2aa9fd7011865c3ab3d067abaa8a64fda",
+      "role": "application-candidate"
+    }
+  ]
+}

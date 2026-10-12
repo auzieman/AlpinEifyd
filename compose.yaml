@@ -1,0 +1,35 @@
+services:
+  prepare:
+    image: alpine:3.24.2@sha256:d56c381f961d307a21b3ca004cf1e3910f106644aefb1f43e654c8a56c4fd395
+    command: ["sh", "-ec", "chown 1000:1000 /packages /distfiles /keys /work"]
+    volumes:
+      - packages:/packages
+      - distfiles:/distfiles
+      - signing:/keys
+      - work:/work
+  builder:
+    image: alpine-public-builder:local
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+      args:
+        BUILD_ORDER: public-order
+    ulimits:
+      nofile: 1048576
+    volumes:
+      - packages:/packages
+      - distfiles:/var/cache/distfiles
+      - signing:/home/builder/.abuild
+      - work:/work
+  repository:
+    image: nginx:stable-alpine
+    ports:
+      - "127.0.0.1:8088:80"
+    volumes:
+      - packages:/usr/share/nginx/html:ro
+volumes:
+  packages:
+  distfiles:
+  signing:
+  work:
+    name: alpine-build-${BUILD_REVISION:?Set BUILD_REVISION to the compiler image ID}

@@ -1,0 +1,9 @@
+{
+  "format": "alpine-desktop-intent-v1",
+  "name": "workstation",
+  "extends": "enlightenment-x11",
+  "native_packages_file": "image/packages",
+  "flatpak_packages_file": "image/workstation-flatpaks",
+  "status": "live-workstation-proof",
+  "alpine_release": "3.24"
+}

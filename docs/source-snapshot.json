@@ -1,0 +1,295 @@
+{
+  "source_commit": "7d58945d7ef0981f11bc338aa6628119b238f229",
+  "date": "2026-10-12",
+  "includes_working_tree_updates": true,
+  "excluded": [
+    "Git history",
+    "build outputs",
+    "private lab documentation and receipts",
+    "host-specific laptop installation plans",
+    "lab connection demos",
+    "third-party compiled theme assets pending per-asset redistribution verification"
+  ],
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "1c19cb991fdf117c3cee5fed5bab9b302a158c607754f058ec2ea2f1c3691502"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e608f7eb123f4490f06a5b3bdc6990990443411daaf06712922ba701c5432a81"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ed54229f7c683f5c1b6d7653024c3195ab1691589857a4f52d5becd658a9799a"
+    },
+    {
+      "path": "aports/alpine-spin-themes/APKBUILD",
+      "sha256": "46f0fe862786af9c908514e9ce19a66a8e414de684080c29eee4fd4faa2c3272"
+    },
+    {
+      "path": "aports/alpine-spin-themes/AUTHORS",
+      "sha256": "ce90a982dba651eaf212bb70b4090608012e965ea7559c80ae6a39b2bc485502"
+    },
+    {
+      "path": "aports/alpine-spin-themes/AUTHORS.elementary",
+      "sha256": "9820e8bb63ed734098c6c2bdb93b40e61c8ab8f0d6a6a2888eac5f16b38d1ccc"
+    },
+    {
+      "path": "aports/alpine-spin-themes/AUTHORS.enlightenment",
+      "sha256": "0b7985762864a28fab94c1e8d941c4b0ac4f91423ac2649e9ae045034a38cc59"
+    },
+    {
+      "path": "aports/alpine-spin-themes/AUTHORS.terminology",
+      "sha256": "495f0fd3d2514b99a5e6bc448f2a797fcae56d6837473744c547b5ccefbbb870"
+    },
+    {
+      "path": "aports/alpine-spin-themes/COPYING",
+      "sha256": "dc083e9e8416a67829fbc9efdfb40f7d61296d1c8745b563644ea8baeba1bb25"
+    },
+    {
+      "path": "aports/alpine-spin-themes/COPYING.bsd",
+      "sha256": "07101b7032f785734ef22c228c62a2f65f44865ff4c903a3613ee7e3518871b3"
+    },
+    {
+      "path": "aports/alpine-spin-themes/COPYING.images",
+      "sha256": "9dcaabe7d4dd7be2181fe972552a2fd8b1594695d4f1098c930132f859fd748e"
+    },
+    {
+      "path": "aports/alpine-spin-themes/COPYING.lgpl",
+      "sha256": "d8c7f1d002d7a3360677b1d20f58e321d1f4797bc5761979f85a570ab65664dc"
+    },
+    {
+      "path": "aports/alpine-spin-themes/COPYING.terminology",
+      "sha256": "df18bd9d1284916e82cf18fcccfb95a163520361fee614d44f9021236e6fae0b"
+    },
+    {
+      "path": "aports/alpine-spin-themes/README.icons",
+      "sha256": "3bf8425d32a1b4670cfe5a9c29d453f61941387c16a98c65aab3661b59f649ae"
+    },
+    {
+      "path": "aports/alpine-spin-wallpapers/APKBUILD",
+      "sha256": "32fc422d066fbf38952b2bee9a18976fd8971a7902cb1a7602e83adfa3f9cc66"
+    },
+    {
+      "path": "aports/alpine-spin-wallpapers/LICENSE",
+      "sha256": "8c3a74af2b4d7d3f13c07609484432f058f1945d6518f626da389c89804e4900"
+    },
+    {
+      "path": "aports/alpine-spin-wallpapers/alpine-midnight.svg",
+      "sha256": "07049445ffb6285a74f3abf92ed15758803349bafe56e5607354b68559d73d6b"
+    },
+    {
+      "path": "aports/alpine-spin-wallpapers/alpine-violet.svg",
+      "sha256": "59b764ced2c7e9a1787ad59d762e6e71390c1bd1895c4027719c4e044275096a"
+    },
+    {
+      "path": "aports/ecrire/APKBUILD",
+      "sha256": "99523dd6c699218fbae325a235a1899038531b3ad80b26a911a8e5ae438d67b7"
+    },
+    {
+      "path": "aports/efl/APKBUILD",
+      "sha256": "a8c80398e9baf5eae0f57759376700779188bf4d0ac5fb41dea064b62d98173c"
+    },
+    {
+      "path": "aports/efl/prepare.py",
+      "sha256": "b659d59f162cdc0617d1dcc524984827b27e89f12211015c64e57456a39c8ac4"
+    },
+    {
+      "path": "aports/eifyd-installer/APKBUILD",
+      "sha256": "300b18f20c233c29ff99055afa99414c39bfe8e59ce857a966a750ad686ed6f1"
+    },
+    {
+      "path": "aports/eifyd-installer/eifyd-install.py",
+      "sha256": "f60502e0fc7774372e2fed385d4694d9889acd30520ee1f0e0ae258b0bca3556"
+    },
+    {
+      "path": "aports/eifyd-installer/eifyd-terminal",
+      "sha256": "4613c93c6f213f23823913af7b829e5b2042bdb43981b2ca95b7febf05b8afc5"
+    },
+    {
+      "path": "aports/eifyd-installer/eifyd.c",
+      "sha256": "0231f7dfc7ea1efaa97fdce7b6b55a52f96f53563c044e3d77f615b73dac3630"
+    },
+    {
+      "path": "aports/eifyd-installer/eifyd.desktop",
+      "sha256": "e7f0d9548bba8b878bcae8ac8e0d9077fd5f2e16e95c9fb2b1b630affe3c2f5e"
+    },
+    {
+      "path": "aports/eifyd-installer/eifyd_storage.py",
+      "sha256": "9740729f618acb7a7359c79ab7fc40043c28afd0f772c845749be99810f99850"
+    },
+    {
+      "path": "aports/eifyd-installer/mark-shield-swords.png",
+      "sha256": "6eb107e54d2b62a77092e712570271a21efc2af267f2a251890e96cd08eeb0a8"
+    },
+    {
+      "path": "aports/eifyd-installer/package-groups.json",
+      "sha256": "c740975775f9742e1e407e0a48f87ea184eb9f5a37cb8b62280fabdbb1c8af70"
+    },
+    {
+      "path": "aports/enlightenment/APKBUILD",
+      "sha256": "b557ae43aa18d382578793825aadd811929cc9f6c8639fa35305f7f9a1374db5"
+    },
+    {
+      "path": "aports/ephoto/APKBUILD",
+      "sha256": "317711ab4069688b762267de8c29b81de4334725714d037c5d57d806d04005fb"
+    },
+    {
+      "path": "aports/evisum/APKBUILD",
+      "sha256": "ae36cc71733b0ac800033c3a9e3b6503aa80d7bbe203c470d3ee5b37a00558da"
+    },
+    {
+      "path": "aports/terminology/0001-tytest-make-tests-reliable-on-x32-systems.patch",
+      "sha256": "0ec402a3f3de07e3ecd6a58871e8e7a6bcd8620a6cceec8a661c55f2f1887922"
+    },
+    {
+      "path": "aports/terminology/APKBUILD",
+      "sha256": "73d0f7888b0e4ba9a74eb0b64a03aba13836b4910847534a069cfc0ab56528fa"
+    },
+    {
+      "path": "build/Dockerfile",
+      "sha256": "77052df7f784c2fd573e3747f8835addc486ff2bcb2d60a2c4ff14829405d927"
+    },
+    {
+      "path": "build/PROVENANCE.md",
+      "sha256": "502760ff7f5b43d8c93c1177b6ef012ab3eb87bd7129a5ace1e99577bfd8b3f5"
+    },
+    {
+      "path": "build/addons-order",
+      "sha256": "57c1639be2b71de5c12eb83baefbaa3ceaa882be1fd40d469784ea53b5782e94"
+    },
+    {
+      "path": "build/assets-order",
+      "sha256": "6a849154b4dbec56b706b0f3a6a30b8b51f2b2888681aecb3b8edd95ceede50a"
+    },
+    {
+      "path": "build/build-addons.sh",
+      "sha256": "596aa2f3cd63e5cec655b00497fc52ceab33b6c6c8c422b4cfc8221795096de3"
+    },
+    {
+      "path": "build/build-packages.sh",
+      "sha256": "ea8e40321fca663e80342dfe6378561a786b37c3ded46a4bded0f0391a2cd1db"
+    },
+    {
+      "path": "build/installer-order",
+      "sha256": "251a91a0a6844bdcce8b5c659566af63e52c434dacd57704db5e0a4c628dbbd7"
+    },
+    {
+      "path": "build/order",
+      "sha256": "420a49583e3d1c494af345e1892636efc58d0788ed072481367e4edd2bf40421"
+    },
+    {
+      "path": "build/prepare-dependencies.sh",
+      "sha256": "8c33d4752af58f6d858f6f68ff07441ed78971dde081c8c4d10d1c3284d6c36c"
+    },
+    {
+      "path": "build/public-order",
+      "sha256": "eb913b9fdc04cd1079dcaa866bb811c140fdc6ce01768a2597c8954c703cdff2"
+    },
+    {
+      "path": "catalog/everse.json",
+      "sha256": "1c0e8861633f6c7046917f80d561852e7cdeeb58ed6df80fdd2137d3b451150f"
+    },
+    {
+      "path": "catalog/sources.json",
+      "sha256": "3fffe46a73f3dce1a8e202e35161b402f540adf33c93780eb6ef5e4b3f47d31c"
+    },
+    {
+      "path": "catalog/themes.json",
+      "sha256": "6786a562b007a7c5ab4cc8edef9bf9cae76f0bbbe777cc428162c51ff2dcb134"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "e4d837bc0aee0be35297e0fa94481216ace26f8b9304a5f252a03c7abf5d5f39"
+    },
+    {
+      "path": "docs/decisions.md",
+      "sha256": "ab004552ab14b28c353bde0e0b58e4d156e7408988f731e54c4ae95e0493e584"
+    },
+    {
+      "path": "docs/gaming-retro.md",
+      "sha256": "27c4f493198b8a28bd77f5e5b5da914be8f0a33dc49d3bce399a32b8fa6c0ef6"
+    },
+    {
+      "path": "docs/installer-upstream-review.md",
+      "sha256": "5dd14cb6c9c1e039a8743c45d8fb9333b885dcb2331fd10dbaab42d7a3af404c"
+    },
+    {
+      "path": "docs/installer.md",
+      "sha256": "3cb0da62fe214ac4958bd54cdacbf894134e5ad5e28a8d42c7e8e70860a357ae"
+    },
+    {
+      "path": "docs/public-release.md",
+      "sha256": "c5c9d2fe690c21f6b409fbc48a3be5eae2638a368a70a2b2b221ed33245b200c"
+    },
+    {
+      "path": "docs/repository-and-image.md",
+      "sha256": "e6fcd5a27d7ca474114d7005a65b2681a41a328cdfba92af36830e1c9b98b43c"
+    },
+    {
+      "path": "docs/themes.md",
+      "sha256": "fa5631fac0f843e59a085d73fc81cd0dc93d5eed11d674e8fc56b2a1f9a92669"
+    },
+    {
+      "path": "docs/upstream-research.md",
+      "sha256": "984d227d164d728cc994c0093fd0ee46c314f22ae7db5363033b4ebca7bbcb5c"
+    },
+    {
+      "path": "image/Dockerfile",
+      "sha256": "1a8c0378ac78202ca9c1e9d62cf8073a74d1db07a80eefe8e10e4590ec406366"
+    },
+    {
+      "path": "image/README.md",
+      "sha256": "a2da306d74b4b54977e169b9e6963c96e342170742a07aa8bdbab6d20aff3209"
+    },
+    {
+      "path": "image/build.sh",
+      "sha256": "282015ffc902d760f36cb91afabe8d410be33f505f5eb9cf2fb61b3651a19672"
+    },
+    {
+      "path": "image/configure-host.sh",
+      "sha256": "46d473388168946c4855fec25062321ee4dd9ac655169cb8770d09437efacea7"
+    },
+    {
+      "path": "image/configure.sh",
+      "sha256": "e65f54d47dc600613ddb6b2074a9dfbc45ef4ed04de3c5707729ebaae923d62c"
+    },
+    {
+      "path": "image/gen-skeleton.py",
+      "sha256": "457ab7f5548966083467de67bac0b3218a15faa2be620e3aa47b7f579acce910"
+    },
+    {
+      "path": "image/packages",
+      "sha256": "49a0bba4c23d05f863bdbca3d992004d4e2cfdfb561da8d4c93152d1ced66833"
+    },
+    {
+      "path": "image/workstation-flatpaks",
+      "sha256": "234e0fcaaf0df7f996afe09dec35b4882aed1353f72606472f0aa1afd57ca750"
+    },
+    {
+      "path": "image/workstation-setup.sh",
+      "sha256": "13d3497a95260191856830bad65d3a542bc0b59273ef707406270037a07a64d4"
+    },
+    {
+      "path": "profiles/cosmic-wayland.json",
+      "sha256": "b2951e9c1619ef00c95fc57c6031963229183e3e00f01643c750f71eb602087b"
+    },
+    {
+      "path": "profiles/enlightenment-x11.json",
+      "sha256": "01d87cc15830cf6a5df101c2a79b6cc710a2ee4922da26bcb866b4a3d5eae5d8"
+    },
+    {
+      "path": "profiles/gaming-retro.json",
+      "sha256": "513aadd24ee0fe2fc59481f5b31e9893b439f13aea4a7fb32c20de566654a07e"
+    },
+    {
+      "path": "profiles/workstation.json",
+      "sha256": "42da91801a931bb63f194ac0238fa1bfa126ead9e9abb50bcece1994cd5770be"
+    },
+    {
+      "path": "tests/test_eifyd_installer.py",
+      "sha256": "fba90c603315b8ac5767d8c1238feac1f19d8209ad0489a2c7b1e63de9d0a171"
+    }
+  ]
+}

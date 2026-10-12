@@ -1,0 +1,9 @@
+/artifacts/
+/cache/
+/work/
+/build/out/
+*.rsa
+*.key
+__pycache__/
+*.pyc
+/aports/alpine-spin-themes/*.edj

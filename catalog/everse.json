@@ -1,0 +1,95 @@
+{
+  "format": "alpine-everse-catalog-v1",
+  "observed": "2026-09-19",
+  "source": "https://www.enlightenment.org/download",
+  "packages": [
+    {
+      "name": "efl",
+      "observed_version": "1.28.1",
+      "role": "foundation",
+      "status": "recipe-prepared-unbuilt",
+      "recipe": "aports/efl/APKBUILD",
+      "compatibility": "unverified"
+    },
+    {
+      "name": "enlightenment",
+      "observed_version": "0.27.1",
+      "role": "desktop",
+      "status": "recipe-prepared-unbuilt",
+      "recipe": "aports/enlightenment/APKBUILD",
+      "compatibility": "unverified"
+    },
+    {
+      "name": "terminology",
+      "observed_version": "1.14.0",
+      "role": "core-app",
+      "status": "recipe-prepared-unbuilt",
+      "recipe": "aports/terminology/APKBUILD",
+      "compatibility": "unverified"
+    },
+    {
+      "name": "rage",
+      "observed_version": "0.4.0",
+      "role": "media",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "ephoto",
+      "observed_version": "1.6.0",
+      "role": "photos",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "ecrire",
+      "observed_version": "0.2.0",
+      "role": "editor",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "evisum",
+      "observed_version": "2.0.12",
+      "role": "monitor",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "econnman",
+      "observed_version": "1.1",
+      "role": "network-ui",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "python-efl",
+      "observed_version": "1.26.1",
+      "role": "bindings",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "enventor",
+      "observed_version": "1.0.0",
+      "role": "development",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    },
+    {
+      "name": "edi",
+      "observed_version": "0.8.0",
+      "role": "development",
+      "status": "candidate-unbuilt",
+      "recipe": null,
+      "compatibility": "unverified"
+    }
+  ]
+}

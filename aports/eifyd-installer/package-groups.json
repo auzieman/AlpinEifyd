@@ -1,0 +1,86 @@
+[
+  {
+    "name": "E applications",
+    "apk": [
+      "ephoto",
+      "ecrire",
+      "evisum",
+      "rage"
+    ],
+    "flatpak": []
+  },
+  {
+    "name": "Office and web",
+    "apk": [
+      "firefox",
+      "libreoffice",
+      "mousepad"
+    ],
+    "flatpak": [
+      "com.discordapp.Discord"
+    ]
+  },
+  {
+    "name": "Development",
+    "apk": [
+      "nodejs",
+      "npm",
+      "git"
+    ],
+    "flatpak": [
+      "com.visualstudio.code",
+      "dev.zed.Zed"
+    ]
+  },
+  {
+    "name": "Podman and Compose",
+    "apk": [
+      "podman",
+      "podman-compose",
+      "podman-openrc"
+    ],
+    "flatpak": []
+  },
+  {
+    "name": "Container image tools",
+    "apk": [
+      "buildah",
+      "skopeo"
+    ],
+    "flatpak": []
+  },
+  {
+    "name": "Container workspaces and compatibility",
+    "apk": [
+      "distrobox",
+      "podman-docker"
+    ],
+    "flatpak": []
+  },
+  {
+    "name": "Rootless container networking and storage",
+    "apk": [
+      "fuse-overlayfs",
+      "slirp4netns",
+      "passt"
+    ],
+    "flatpak": []
+  },
+  {
+    "name": "Windows apps and games",
+    "apk": [],
+    "flatpak": [
+      "com.usebottles.bottles",
+      "com.valvesoftware.Steam",
+      "net.lutris.Lutris",
+      "net.davidotek.pupgui2"
+    ]
+  },
+  {
+    "name": "Flatpak permissions",
+    "apk": [],
+    "flatpak": [
+      "com.github.tchx84.Flatseal"
+    ]
+  }
+]

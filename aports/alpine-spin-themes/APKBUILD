@@ -1,0 +1,83 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=alpine-spin-themes
+pkgver=20260919
+pkgrel=2
+pkgdesc="Compatibility metapackage for the retained AlpinE theme collection"
+url="https://github.com/simotek/Enlightenment-Themes"
+arch="noarch"
+license="LicenseRef-Unspecified"
+options="!check"
+depends="e-theme-a-19-sunshine=$pkgver-r$pkgrel e-theme-amisun-amikit-final=$pkgver-r$pkgrel e-theme-amisun-simple=$pkgver-r$pkgrel e-theme-cerium2=$pkgver-r$pkgrel e-theme-dark=$pkgver-r$pkgrel e-theme-dimensions=$pkgver-r$pkgrel e-theme-e20-scifi-theme=$pkgver-r$pkgrel e-theme-fireball2=$pkgver-r$pkgrel e-theme-grunge2=$pkgver-r$pkgrel e-theme-ice=$pkgver-r$pkgrel e-theme-neonz=$pkgver-r$pkgrel e-theme-r-matrix-2-0-e22=$pkgver-r$pkgrel e-theme-r-nightbling2-2-0-e22=$pkgver-r$pkgrel e-theme-r-steam-2-0-e22=$pkgver-r$pkgrel e-theme-retrowave-theme=$pkgver-r$pkgrel e-theme-transient-color=$pkgver-r$pkgrel e-theme-transient=$pkgver-r$pkgrel e-theme-opensuse-neon=$pkgver-r$pkgrel e-theme-opensuse-oliveleaf=$pkgver-r$pkgrel e-theme-opensuse-ice=$pkgver-r$pkgrel e-theme-opensuse=$pkgver-r$pkgrel e-theme-vtx=$pkgver-r$pkgrel e-theme-vulcan-retro-20221211121900=$pkgver-r$pkgrel"
+subpackages="e-theme-a-19-sunshine:e_theme_a_19_sunshine:noarch e-theme-amisun-amikit-final:e_theme_amisun_amikit_final:noarch e-theme-amisun-simple:e_theme_amisun_simple:noarch e-theme-cerium2:e_theme_cerium2:noarch e-theme-dark:e_theme_dark:noarch e-theme-dimensions:e_theme_dimensions:noarch e-theme-e20-scifi-theme:e_theme_e20_scifi_theme:noarch e-theme-fireball2:e_theme_fireball2:noarch e-theme-grunge2:e_theme_grunge2:noarch e-theme-ice:e_theme_ice:noarch e-theme-neonz:e_theme_neonz:noarch e-theme-r-matrix-2-0-e22:e_theme_r_matrix_2_0_e22:noarch e-theme-r-nightbling2-2-0-e22:e_theme_r_nightbling2_2_0_e22:noarch e-theme-r-steam-2-0-e22:e_theme_r_steam_2_0_e22:noarch e-theme-retrowave-theme:e_theme_retrowave_theme:noarch e-theme-transient-color:e_theme_transient_color:noarch e-theme-transient:e_theme_transient:noarch e-theme-opensuse-neon:e_theme_opensuse_neon:noarch e-theme-opensuse-oliveleaf:e_theme_opensuse_oliveleaf:noarch e-theme-opensuse-ice:e_theme_opensuse_ice:noarch e-theme-opensuse:e_theme_opensuse:noarch e-theme-vtx:e_theme_vtx:noarch e-theme-vulcan-retro-20221211121900:e_theme_vulcan_retro_20221211121900:noarch"
+source="AUTHORS AUTHORS.elementary AUTHORS.enlightenment AUTHORS.terminology COPYING COPYING.bsd COPYING.images COPYING.lgpl COPYING.terminology README.icons A-19-Sunshine.edj AmiSun_AmiKit_Final.edj AmiSun_Simple.edj Cerium2.edj Dark.edj Dimensions.edj E20-Scifi-theme.edj Fireball2.edj Grunge2.edj Ice.edj Neonz.edj R-Matrix-2.0_E22.edj R-NightBling2-2.0_E22.edj R-Steam-2.0_E22.edj Retrowave-theme.edj Transient-Color.edj Transient.edj openSUSE-Neon.edj openSUSE-Oliveleaf.edj openSUSE-ice.edj openSUSE.edj vtx.edj vulcan-retro-20221211121900.edj"
+builddir="$srcdir"
+
+package() { mkdir -p "$pkgdir"; }
+
+_theme() {
+    depends=""
+    replaces="alpine-spin-themes"
+    pkgdesc="$1 Enlightenment theme"
+    install -Dm644 "$srcdir/$2" "$subpkgdir/usr/share/elementary/themes/$2"
+    install -d "$subpkgdir/usr/share/doc/$subpkgname/retained-notices"
+    install -m644 "$srcdir"/AUTHORS* "$srcdir"/COPYING* "$srcdir"/README.icons "$subpkgdir/usr/share/doc/$subpkgname/retained-notices/"
+}
+e_theme_a_19_sunshine() { _theme "A-19-Sunshine" "A-19-Sunshine.edj"; }
+e_theme_amisun_amikit_final() { _theme "AmiSun_AmiKit_Final" "AmiSun_AmiKit_Final.edj"; }
+e_theme_amisun_simple() { _theme "AmiSun_Simple" "AmiSun_Simple.edj"; }
+e_theme_cerium2() { _theme "Cerium2" "Cerium2.edj"; }
+e_theme_dark() { _theme "Dark" "Dark.edj"; }
+e_theme_dimensions() { _theme "Dimensions" "Dimensions.edj"; }
+e_theme_e20_scifi_theme() { _theme "E20-Scifi-theme" "E20-Scifi-theme.edj"; }
+e_theme_fireball2() { _theme "Fireball2" "Fireball2.edj"; }
+e_theme_grunge2() { _theme "Grunge2" "Grunge2.edj"; }
+e_theme_ice() { _theme "Ice" "Ice.edj"; }
+e_theme_neonz() { _theme "Neonz" "Neonz.edj"; }
+e_theme_r_matrix_2_0_e22() { _theme "R-Matrix-2.0_E22" "R-Matrix-2.0_E22.edj"; }
+e_theme_r_nightbling2_2_0_e22() { _theme "R-NightBling2-2.0_E22" "R-NightBling2-2.0_E22.edj"; }
+e_theme_r_steam_2_0_e22() { _theme "R-Steam-2.0_E22" "R-Steam-2.0_E22.edj"; }
+e_theme_retrowave_theme() { _theme "Retrowave-theme" "Retrowave-theme.edj"; }
+e_theme_transient_color() { _theme "Transient-Color" "Transient-Color.edj"; }
+e_theme_transient() { _theme "Transient" "Transient.edj"; }
+e_theme_opensuse_neon() { _theme "openSUSE-Neon" "openSUSE-Neon.edj"; }
+e_theme_opensuse_oliveleaf() { _theme "openSUSE-Oliveleaf" "openSUSE-Oliveleaf.edj"; }
+e_theme_opensuse_ice() { _theme "openSUSE-ice" "openSUSE-ice.edj"; }
+e_theme_opensuse() { _theme "openSUSE" "openSUSE.edj"; }
+e_theme_vtx() { _theme "vtx" "vtx.edj"; }
+e_theme_vulcan_retro_20221211121900() { _theme "vulcan-retro-20221211121900" "vulcan-retro-20221211121900.edj"; }
+
+sha512sums="
+3394c2d120ae3f06bf6b76c50daa4aae92fa70379f191115ec489feb7fc26fa036430538e32e8d0c9eb016b84283d2113215981b8d9ddd8d8bb3a27ecdc068f1  AUTHORS
+b1bcb9045f3fa433dc2965b798ea686383c6afb30d5df231f776c82efde53094f38ae76e5e9eb390bbe92799395abdf8612ccfd29f3a7b8b184c96aa989bd882  AUTHORS.elementary
+51018d292ddbdc718c4dd52ec5bebfbe54d2f50ff7b52afbac683b03391f796a0c0f9b4c8832a3aed0211a9ef6df86f49eb0f5ab202ffe1a3e4ec8520a0dfc89  AUTHORS.enlightenment
+d3effca45d8752632f4869639a443d7f99c3195b77a2af535e840a64e9409be7a8024ca2c3ed2c62efcc0e3687f49f227393b9d936d134dc54a461f3ae7ddd6d  AUTHORS.terminology
+382a5d5cf16f51420446610d684fa2b1c5f815e5fe54bea74e0aec1287e8cebaeb07bbc49812f493f69cdf918f8997dee998c313e28c6f9df481d18287bf50e8  COPYING
+b175786958001a9f13fa420e2da6ac8c0a92ed5ff5e5c7beae1abcb76e11e9909512974d48af701adf7c6d86fda73928d1048506f31c4622015a0d5993723cb4  COPYING.bsd
+24b5302fdfd7075ea590ba6aaf48c812c11c6d5d879fb5a0a6d2229f89307813e6737b49570b8a83be7f64629117f52a9bde7617d3c0fea22854494f3f7809f3  COPYING.images
+f6b955bcf25ca9aff24dec30379055379558b32396fee33169a85726004b8ba36fc81ca3c348cfa5f566378d7d146c91250ec811dfcfbb7018d84b537346178d  COPYING.lgpl
+262c91c5eb3b2445843b500cee123ed4eb20c53f253fa6b48e04af824f65c40c18f4bd18ac924c94f60b8cfbaaaae71aea511b28182a2654a435956ed2797acc  COPYING.terminology
+0f7808d01a906a5ea9180ac22f6db99e37980f6481acf63c12b831e3efe284989ef303683e5f7b125315b79c7dcb380e0afe5dfac78586e31b060527d3f94714  README.icons
+8a75d6ab277599595d6430f964674e6946635b89c59fb280f262446c0a0fe2588a32173981af093e6489a4ba199cdefadd153f214dde89508fc4b478663f7738  A-19-Sunshine.edj
+2576744506807188de13a879c2030164a8169122f41f9ead8b99bc3a3da0263161ae0049ce733ab80e58c6a7abb20022c5da5d2ce0ec4b29a4254d3ad3040ccb  AmiSun_AmiKit_Final.edj
+641bf8e977f0a258ae1a8ff7f939712a3b14476c8b27f0531847d98a0b1dfc290f354249f61c0beb6091fc96c1749c8e745a48060cbe61fc7826d207816d0e8b  AmiSun_Simple.edj
+0d1fc6ab02ce29b61ae97cdc74713adfbcb8603f2f0b3d0b53dd64dc1fc2bb7f1f7dccbf36d50b20050b3b6821f6d9d77cfa72bd1b2081d124bed0d0f3339765  Cerium2.edj
+f3ac752db8759e32e2a4af71c619ce159409938ff9ebad60fcbc1ae13e0eb58e5f46f9bdb961b0e6e866f0c2a302469b747f05f45d420e40761247812a868257  Dark.edj
+249e11a75d93027b467bb67a67d3646f6f1734928b6829a039a6ea3ee70bdc8b57bd1e2539f34991820c0ae66aaaffe716c22718f4517783e820854bd7983900  Dimensions.edj
+04a9917fafa1b59b1973d89c6235d0417dc323bbf77ae22f1104681bbf6b653526989241013d960b8b663fb1b42670185492c55d0e63baa02f3c5ce3a5a8c92d  E20-Scifi-theme.edj
+8524b2bc7283a0d2893251c55b9aabc767c048a7b2a4f8cbac4249292536d4548ebb8336ca4a48ebbc1bd0d1f25e2910c5a47ff82e4b752dab39e133834589fb  Fireball2.edj
+6aacb92576e0911d374f55a27fee472c493cf551e9666414564a9cedd1bf81694fb0c2c4b5f7a50ae8d34e26018da38c00867b610503a45f80241d1677f25e99  Grunge2.edj
+ef616e59716d50bd4624408d4b3a239fdd520ccc9f3c5ec2039a2c8bc4618d1f9892fe1c9a4a0fbaae92410cc2532639094c1f9fb6de231b9769644bc1d1aa93  Ice.edj
+c750d21aa1dfdd9744f0129e44612f39b999221e4b0baf4edbd0070a466c86f5d13ef3f46cfb82444dc02ed624a134c073a488d1856321ff8b8eeb8f19415dc2  Neonz.edj
+32f819551a5d405e509bafa0114ec3819bbecc4430c6ab3532307357dee38b2db5036978b83fff03d9e917175121be229457fe34818529d6331c27266467b845  R-Matrix-2.0_E22.edj
+49263bb25a485e01cfabd729feb98b292149cf922be1bb54ba8f00d49d715fd3da5565732444987fb343c734206e008b38df8a52c4f37df71fa634e5b70a6447  R-NightBling2-2.0_E22.edj
+ea730c4a033c6a664ca7f1935bcd089bbb180bdcd00439625dfb191cce1763aa4d60c3fef27cb711fc904ea9fb041f8ae5421ac732c91a82e0e36c0a6995b41f  R-Steam-2.0_E22.edj
+e34550f855588d4767923ccc67d5d93cdd6a28a9a5d68e8ed498ccf0cdf9ca2e3e1fc46c54bf5ee085e4fc25e4a325470a9080e2fa80f2863bc96dcc5cb1ff88  Retrowave-theme.edj
+dadd49203a74318711db8d88cab903a16dc9823bce4f3808a9333451e4469750f940a2f22f54bd38f8663ec2c702433f61af8a8bce90b885de3d97297cf8ce53  Transient-Color.edj
+b58787d45a813eaa2d12c248d80d48da0cf6e45e1da7cd9bd388b65b2bac6ba4e93701160bfa664d0bce4078f58c487443450da560a3c0dcd56e6309a5852802  Transient.edj
+178c6dae9fa05fda8e898c3a046c66bf0658900268a05e50520c341df946c774943fa18f644093a29e4eb99a780108ebd37eb434d3a3c00383b0895b4339383d  openSUSE-Neon.edj
+8867756728325881bf26385fc985f1fc1dcad6fd0743ae7eb08ff053812b4fe3f36ac198293887b798ae1161d258bd2ff8b44c56074023fe771c26d8a23d220e  openSUSE-Oliveleaf.edj
+63e218795bfbf51284d42cb0f8d747ed63d331009da765c5200dc9522dab24897e8764a29c8e4d83d8c33557573a9b55d6eb9dac304101864d6508bae51faba1  openSUSE-ice.edj
+8b3fb97f8c33063af5733b2bc75c2786de4df6d771266489865c31ed56f0d0f7bd2e76150b9f8371cf36fec368cc23d9c7de544f2da15144b7d2a399e0a90f6b  openSUSE.edj
+9cc73e38e4e36fbabfc640cbc430032b10da5ea0576aa8b1866ec5cd376a52d2ff814ee612e4f3d959a51edc91dcc2edc48c3ac429a3080d0584ad94ac752f19  vtx.edj
+77abb468f9f91302fafbd8cb482e1a5600e777120a9286a90d9abfdac9a0a6f357062cedb3d3c0f675c8fe60091bff36d2c0f476b953d1fa3f0ac7be75bc1116  vulcan-retro-20221211121900.edj
+"

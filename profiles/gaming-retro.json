@@ -1,0 +1,41 @@
+{
+  "format": "alpine-desktop-intent-v1",
+  "name": "gaming-retro",
+  "extends": "workstation",
+  "architecture": "x86_64",
+  "alpine_release": "3.24",
+  "status": "selection-unbuilt",
+  "candidates": [
+    "flatpak",
+    "fs-uae",
+    "fs-uae-launcher"
+  ],
+  "flatpak_candidates": [
+    {
+      "id": "com.usebottles.bottles",
+      "remote": "flathub"
+    },
+    {
+      "id": "com.valvesoftware.Steam",
+      "remote": "flathub"
+    }
+  ],
+  "compatibility_tools": [
+    {
+      "name": "Proton",
+      "consumer": "Steam",
+      "selection": "Validate an Alpine-compatible Flatpak runtime/tool combination before pinning; Steam startup alone is not game acceptance."
+    }
+  ],
+  "fallback_candidates": [
+    {
+      "for": [
+        "fs-uae",
+        "fs-uae-launcher"
+      ],
+      "flatpak_id": "net.fsuae.FS-UAE",
+      "remote": "flathub"
+    }
+  ],
+  "note": "Optional daily-driver profile. Native FS-UAE package availability must be checked against the selected Alpine release; do not mix edge packages into stable. Prefer native or fallback, not duplicate installations."
+}

@@ -1,0 +1,12 @@
+{
+  "session": "wayland",
+  "candidates": [
+    "cosmic-session"
+  ],
+  "status": "evaluate-after-base-selection",
+  "note": "Full COSMIC package closure is pending; cosmic-session alone is not a complete desktop.",
+  "format": "alpine-desktop-intent-v1",
+  "name": "cosmic-wayland",
+  "alpine_release": "3.24",
+  "architecture": "x86_64"
+}

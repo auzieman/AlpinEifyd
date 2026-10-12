@@ -1,0 +1,39 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=eifyd-installer
+pkgver=0.2.0
+pkgrel=8
+pkgdesc="E'ifyd Elementary front end to native Alpine desktop installation"
+url="https://lab.auzietek.com/gitea/auzietek/AlpinE"
+arch="all"
+license="LicenseRef-Auzietek"
+depends="alpine-conf python3 openssl sudo terminology lsblk rsync e2fsprogs sfdisk parted dosfstools grub grub-bios grub-efi gparted"
+makedepends="efl-dev"
+options="!check"
+source="eifyd.c eifyd-install.py eifyd_storage.py package-groups.json eifyd-terminal eifyd.desktop mark-shield-swords.png"
+builddir="$srcdir"
+
+build() {
+    ${CC:-cc} $CFLAGS -Wall -Wextra -o eifyd-installer eifyd.c $LDFLAGS $(pkg-config --cflags --libs elementary)
+}
+
+package() {
+    install -Dm755 eifyd-installer "$pkgdir/usr/bin/eifyd-installer"
+    install -Dm755 eifyd-install.py "$pkgdir/usr/libexec/eifyd-install"
+    install -Dm644 eifyd_storage.py "$pkgdir/usr/libexec/eifyd_storage.py"
+    install -Dm644 package-groups.json "$pkgdir/usr/libexec/package-groups.json"
+    install -Dm755 eifyd-terminal "$pkgdir/usr/libexec/eifyd-terminal"
+    install -Dm644 eifyd.desktop "$pkgdir/usr/share/applications/eifyd.desktop"
+    install -Dm644 eifyd.desktop "$pkgdir/usr/share/applications/alpine-install.desktop"
+    install -Dm755 eifyd.desktop "$pkgdir/etc/skel/Desktop/alpine-install.desktop"
+    install -Dm644 mark-shield-swords.png "$pkgdir/usr/share/eifyd/mark-shield-swords.png"
+}
+
+sha512sums="
+69bf57f126aea9aea2d071ce96053a96bac47f0e1dd769ea0e7f431d818790bd001d2c414a06ec0f67ea229e9fa84a518deb8a8faa25ced0ead7e7e01b2ca557  eifyd.c
+9e0b96a6e96d82d553aaa395bcffcdb4ed8cba5749ac65536af71e710f5df65a3730b57fdc971169fb0bcc206a5dac9525de5a19899c5a3d4dad0f9ed9da6333  eifyd-install.py
+c87c2cb4fa0b6834be0fc99b0fcc0380d41a5ec8fd2dbd843e2e1d33ee6762f9cb5f496c1c8dbaf7fd6924c0a431d9b0d300976461c892f3aa14094bbd6f5b20  eifyd_storage.py
+255a0b9e247917015545479ae379b90b93064cc1af94f49a41d45ca42ea85cea623686ce91f3836e9e90f0e47b5f51b1e7f2cb821f3f086e34d290e0fefedcc2  package-groups.json
+fc1e8ddeae52699e16f6e55966d241cd630822caee633b4c07c703f17020cca34a7513f5e0580381fb44e645b7e3e8584bb61bc11464223d82f54f24803a5e8b  eifyd-terminal
+b7cff851e95889c9a0726f8b1fae59a316cb6e33a0d3a4cd7468a72f5a42686c0e79d3bd2d0742350bc69c85a3fe8f6292a1e83e3387f98ef5db958bd36e5df2  eifyd.desktop
+6331b7d5b44ca18c12fd1b0d5d04e10a24f21c2ab7ae9f8c00861b937c05f7975e91dbc31774f746b3fdf84be189bb1a17d548106062be13483d4bb325c85b6a  mark-shield-swords.png
+"

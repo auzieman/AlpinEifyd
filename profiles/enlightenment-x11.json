@@ -1,0 +1,60 @@
+{
+  "session": "x11",
+  "candidates": [
+    "efl",
+    "enlightenment",
+    "terminology"
+  ],
+  "optional_candidates": [
+    "rage",
+    "ephoto",
+    "ecrire",
+    "evisum",
+    "python-efl",
+    "econnman",
+    "enventor",
+    "edi"
+  ],
+  "assets": [
+    "themes",
+    "wallpapers",
+    "menus"
+  ],
+  "format": "alpine-desktop-intent-v1",
+  "name": "enlightenment-x11",
+  "alpine_release": "3.24",
+  "architecture": "x86_64",
+  "status": "selection-unbuilt",
+  "key_app_candidates": [
+    "firefox",
+    "ephoto",
+    "ecrire"
+  ],
+  "note": "Minimal E core plus proposed browser/viewer/editor; exact native package availability pending release selection.",
+  "asset_packages": [
+    "e-theme-a-19-sunshine",
+    "e-theme-amisun-amikit-final",
+    "e-theme-amisun-simple",
+    "e-theme-cerium2",
+    "e-theme-dark",
+    "e-theme-dimensions",
+    "e-theme-e20-scifi-theme",
+    "e-theme-fireball2",
+    "e-theme-grunge2",
+    "e-theme-ice",
+    "e-theme-neonz",
+    "e-theme-r-matrix-2-0-e22",
+    "e-theme-r-nightbling2-2-0-e22",
+    "e-theme-r-steam-2-0-e22",
+    "e-theme-retrowave-theme",
+    "e-theme-transient-color",
+    "e-theme-transient",
+    "e-theme-opensuse-neon",
+    "e-theme-opensuse-oliveleaf",
+    "e-theme-opensuse-ice",
+    "e-theme-opensuse",
+    "e-theme-vtx",
+    "e-theme-vulcan-retro-20221211121900",
+    "alpine-spin-wallpapers"
+  ]
+}

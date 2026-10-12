@@ -1,0 +1,25 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=ecrire
+pkgver=0.2.0
+pkgrel=0
+pkgdesc="Enlightenment text editor"
+url="https://www.enlightenment.org"
+arch="all"
+license="GPL-3.0-or-later"
+makedepends="efl-dev meson gettext-dev"
+options="!check"
+subpackages="$pkgname-lang"
+source="https://download.enlightenment.org/rel/apps/$pkgname/$pkgname-$pkgver.tar.xz"
+
+build() {
+    abuild-meson . build
+    meson compile -C build
+}
+
+package() {
+    DESTDIR="$pkgdir" meson install --no-rebuild -C build
+}
+
+sha512sums="
+6158ac063bdcecf13b2f45448aebcf624d9fe3029d8b2e4bbe40104fbfb5627b02f76112901dfe5617c27dce7ebbf95c277ec6def031efb8a8f1034c092836ef  ecrire-0.2.0.tar.xz
+"

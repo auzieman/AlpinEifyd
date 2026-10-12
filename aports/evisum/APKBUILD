@@ -1,0 +1,25 @@
+# Maintainer: AlpinE <builds@auzietek.com>
+pkgname=evisum
+pkgver=2.0.12
+pkgrel=0
+pkgdesc="Enlightenment system monitor"
+url="https://www.enlightenment.org"
+arch="all"
+license="ISC"
+makedepends="efl-dev meson gettext-dev linux-headers"
+options="!check"
+subpackages="$pkgname-lang"
+source="https://download.enlightenment.org/rel/apps/$pkgname/$pkgname-$pkgver.tar.xz"
+
+build() {
+    abuild-meson . build
+    meson compile -C build
+}
+
+package() {
+    DESTDIR="$pkgdir" meson install --no-rebuild -C build
+}
+
+sha512sums="
+48b78439b512c9d08e46cd84c4bee1321aad28c254256ccb86f6ff3c038028a04a75005da860920a52e0345edb3798cb2582fc3fcba1737d4339e03473c09795  evisum-2.0.12.tar.xz
+"

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#180e29"/><stop offset="1" stop-color="#493451"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h3840v2160H0z"/>
+<circle cx="2880" cy="600" r="190" fill="#d392db" opacity=".14"/>
+<path fill="#493451" d="M0 1800 1000 700 1680 1430 2360 500 3840 1900v260H0z"/>
+<path fill="#d392db" opacity=".4" d="m2360 500-280 384 280-140 300 215zM1000 700l-160 240 160-80 180 140z"/>
+<path fill="#180e29" d="M0 2050 960 1420 1900 1940 2880 1270 3840 1870v290H0z"/>
+<text x="360" y="1880" fill="#ecf1fa" font-family="sans-serif" font-size="110" letter-spacing="14">AlpinE</text>
+<text x="368" y="1960" fill="#d392db" font-family="sans-serif" font-size="32" letter-spacing="8">AUZIETEK</text>
+</svg>
